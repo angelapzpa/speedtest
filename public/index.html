@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TLAXICOM</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <div class="particles-container" id="particles-container"></div>
+  <div id="notificationContainer"></div>
+
+  <header>
+    <div class="header-content">
+      <div class="header-left">
+        <h1>TLAXICOM</h1>
+        <div class="subtitle">Internet a tu alcance</div>
+      </div>
+      <img src="img/logo.png" alt="Logo TLAXICOM" class="logo">
+    </div>
+  </header>
+
+  <div class="main-content">
+    <div class="speedometer-wrapper">
+      <div class="side-labels">
+        <div class="side-label">
+          <h3><i class="fas fa-tachometer-alt card-icon download-icon"></i>Descarga</h3>
+          <div class="card-value" id="dlSpeed">0</div>
+          <div class="card-unit">Mbps</div>
+        </div>
+        <div class="side-label">
+          <h3><i class="fas fa-bullseye card-icon ping-icon"></i>Ping</h3>
+          <div class="card-value" id="pingText">0</div>
+          <div class="card-unit">ms</div>
+        </div>
+      </div>
+      
+      <div class="speedometer-container">
+        <div class="speedometer">
+          <div class="gauge" style="--progress: 0;">
+            <div class="gauge-mask"></div>
+            <div class="gauge-inner">
+              <div class="value-display">
+                <div id="avgSpeed">0</div>
+                <div class="unit">Mbps</div>
+              </div>
+            </div>
+          </div>
+          <div class="needle" id="speedNeedle"></div>
+          <div class="needle-center"></div>
+        </div>
+      </div>
+      
+      <div class="side-labels">
+        <div class="side-label">
+          <h3><i class="fas fa-upload card-icon upload-icon"></i>Subida</h3>
+          <div class="card-value" id="ulSpeed">0</div>
+          <div class="card-unit">Mbps</div>
+        </div>
+        <div class="side-label">
+          <h3><i class="fas fa-wave-square card-icon jitter-icon"></i>Jitter</h3>
+          <div class="card-value" id="jitterText">0</div>
+          <div class="card-unit">ms</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="button-container">
+      <button id="startBtn">
+        <i class="fas fa-bolt"></i> INICIAR PRUEBA
+      </button>
+    </div>
+
+    <div class="test-status" id="detailedStatus">
+      <i class="fas fa-info-circle"></i> Presiona el botón para comenzar la prueba
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
