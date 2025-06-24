@@ -1,5 +1,5 @@
 {
-  "name": "SPEEDTEST",
+  "name": "speedtest",
   "version": "1.0.0",
   "description": "Medidor de velocidad de Internet TLAXICOM",
   "main": "server.js",
@@ -8,7 +8,8 @@
     "dev": "nodemon server.js"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
